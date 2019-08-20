@@ -1,0 +1,880 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: allsecure_woo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-28 11:32+0200\n"
+"PO-Revision-Date: 2019-07-28 11:35+0200\n"
+"Last-Translator: \n"
+"Language-Team: AllSecure <support@allsecpay.com>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_;gettext;gettext_noop;__;_e;"
+"__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;"
+"_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: allsecure_woo.php:30
+msgid "AllSecure Credit Cards"
+msgstr "AllSecure Open"
+
+#: allsecure_woo.php:40
+msgid "Credit Cards"
+msgstr "Plaćanje Karticama"
+
+#: allsecure_woo.php:89
+msgid "AllSecure Payment Gateway"
+msgstr "AllSecure Payment Gateway"
+
+#: allsecure_woo.php:90
+msgid "AllSecure Configuration Settings"
+msgstr "Konfiguracija"
+
+#: allsecure_woo.php:101
+msgid "Enable/Disable"
+msgstr "Omogući"
+
+#: allsecure_woo.php:103
+msgid "Enable AllSecure"
+msgstr "Omogući AllSecure Plaćanje"
+
+#: allsecure_woo.php:107
+msgid "Operation Mode"
+msgstr "Okruženje"
+
+#: allsecure_woo.php:109
+msgid ""
+"You can switch between different environments, by selecting the "
+"corresponding operation mode"
+msgstr ""
+"Možete se prebacivati između različitih okruženja, odabirom odgovarajućeg "
+"načina rada"
+
+#: allsecure_woo.php:113
+msgid "Test Mode"
+msgstr "Test Mode"
+
+#: allsecure_woo.php:114
+msgid "Live Mode"
+msgstr "Live Mode"
+
+#: allsecure_woo.php:118
+msgid "Description"
+msgstr "Opis"
+
+#: allsecure_woo.php:120
+msgid "This controls the description which the user sees during checkout"
+msgstr "This controls the description which the user sees during checkout"
+
+#: allsecure_woo.php:121
+msgid "Pay via AllSecure"
+msgstr "Platite karticama putem AllSecure sistema"
+
+#: allsecure_woo.php:125
+msgid "API Test Credentials"
+msgstr "API TEST Parametri"
+
+#: allsecure_woo.php:127
+msgid ""
+"Enter your AllSecure Test API Credentials to process transactions via "
+"AllSecure. You can get your AllSecure Test Credentials via <a href=\"mailto:"
+"support@allsecpay.com\">AllSecure Support</a>"
+msgstr ""
+"Unesite svoje Test API paremetre kako bi procesirali transakcije kroz "
+"AllSecure. Parametre možete dobiti putem <a href=\"mailto:podrska@allsecure."
+"rs\">AllSecure Podrške</a>"
+
+#: allsecure_woo.php:130
+msgid "Test Entity ID"
+msgstr "Test Entity ID"
+
+#: allsecure_woo.php:132
+msgid ""
+"Please enter your AllSecure Test Entity ID. This is needed in order to take "
+"the payment"
+msgstr ""
+"Molimo unesite dobijeni Test Entity ID. Ovo je neophodno kako biste se "
+"povezali na platformu"
+
+#: allsecure_woo.php:137
+msgid "Test Access Token"
+msgstr "Test Access Token"
+
+#: allsecure_woo.php:139
+msgid ""
+"Please enter your AllSecure Test Access Token. This is needed in order to "
+"take the payment"
+msgstr ""
+"Molimo unesite dobijeni Test Access Token. Ovo je neophodno kako biste se "
+"povezali na platformu"
+
+#: allsecure_woo.php:144
+msgid "Force Result Code"
+msgstr "Forsiraj \"Result Code\""
+
+#: allsecure_woo.php:146
+msgid "Simulate any result code"
+msgstr "Simulirajte odgovor"
+
+#: allsecure_woo.php:151
+msgid "API LIVE Credentials"
+msgstr "API LIVE Parametri"
+
+#: allsecure_woo.php:153
+msgid ""
+"Enter your AllSecure Live API Credentials to process transactions via "
+"AllSecure. You can get your AllSecure Live Credentials via <a href=\"mailto:"
+"support@allsecpay.com\">AllSecure Support</a>"
+msgstr ""
+"Unesite svoje LIVE API parametre kako bi procesirali transakcije kroz "
+"AllSecure. Parametre možete dobiti putem <a href=\"mailto:podrska@allsecure."
+"rs\">AllSecure Podrške</a>"
+
+#: allsecure_woo.php:156
+msgid "Entity ID"
+msgstr "Entity ID"
+
+#: allsecure_woo.php:158
+msgid ""
+"Please enter your AllSecure Entity ID. This is needed in order to the take "
+"payment"
+msgstr ""
+"Molimo unesite dobijeni Entity ID. Ovo je neophodno kako biste se povezali "
+"na platformu"
+
+#: allsecure_woo.php:163
+msgid "Access Token"
+msgstr "Access Token"
+
+#: allsecure_woo.php:165
+msgid ""
+"Please enter your AllSecure Access Token. This is needed in order to take "
+"the payment"
+msgstr ""
+"Molimo unesite dobijeni Access Token. Ovo je neophodno kako biste se "
+"povezali na platformu"
+
+#: allsecure_woo.php:170 allsecure_woo.php:222
+msgid "<hr>"
+msgstr ""
+
+#: allsecure_woo.php:174
+msgid "Merchant Info"
+msgstr "Podaci o trgovcu"
+
+#: allsecure_woo.php:176
+msgid "Please enter your Merchant Info to be displayed near the payment form"
+msgstr ""
+"Molimo unesite informacije o trgovcu koje će biti prikazane kod forme za "
+"unos kartice"
+
+#: allsecure_woo.php:181
+msgid "Merchant Email"
+msgstr "Email Trgovca"
+
+#: allsecure_woo.php:183
+msgid "Please enter your Merchant Email"
+msgstr "Molimo unesite Email Trgovca"
+
+#: allsecure_woo.php:188
+msgid "Shop URL"
+msgstr "Shop URL"
+
+#: allsecure_woo.php:190
+msgid "Please enter your Shop URL"
+msgstr "Molimo unesite URL svoje internet prodavnice"
+
+#: allsecure_woo.php:195
+msgid "Allsecure ID"
+msgstr "ID Trgovca"
+
+#: allsecure_woo.php:197
+msgid "Please enter your ID as displayed on your invoice from AllSecure"
+msgstr ""
+"Molimo unesite ID trgovca koji se nalazi na fakturi koju dobijate od "
+"Allsecure"
+
+#: allsecure_woo.php:202
+msgid "Version Tracker"
+msgstr "Praćenje verizije"
+
+#: allsecure_woo.php:204
+msgid "Enable Version Tracker"
+msgstr "Omogućite praćenje verzije modula"
+
+#: allsecure_woo.php:205
+msgid "When enabled, you accept to share your IP, email address, etc with us"
+msgstr ""
+"U cilju održavanja i unapređenja ovog modula, vršiće se razmena informacija "
+"o verizij plugina koji imate instaliran i ostalih neophodnih informacija za "
+"komunikaciju sa vama"
+
+#: allsecure_woo.php:210
+msgid "Banner Type"
+msgstr "Tip banera"
+
+#: allsecure_woo.php:212
+msgid "Choose type of banner you wish to use"
+msgstr "Izaberite vrstu banera koji želite da prikažete"
+
+#: allsecure_woo.php:215
+msgid "No Banner"
+msgstr "Bez prikaza banera"
+
+#: allsecure_woo.php:216
+msgid "Light Background"
+msgstr "Svetla pozadina"
+
+#: allsecure_woo.php:217
+msgid "Dark Background"
+msgstr "Tamna pozadina"
+
+#: allsecure_woo.php:226 allsecure_woo.php:673
+msgid "Payment Type"
+msgstr "Vrsta plaćanja"
+
+#: allsecure_woo.php:228
+msgid "Choose type of Payment you wish to use"
+msgstr "Izaberite vrstu plaćanja koju želite da koristite"
+
+#: allsecure_woo.php:231
+msgid "Preauthorization (PA)"
+msgstr "Preautorizacija (PA)"
+
+#: allsecure_woo.php:232
+msgid "Debit (DB)"
+msgstr "Direktna naplata (DB)"
+
+#: allsecure_woo.php:237
+msgid "Accepted Cards"
+msgstr "Omogućene kartice"
+
+#: allsecure_woo.php:239
+msgid ""
+"Contact support at <a href=\"support@allsecpay.com\">support@allsecpay.com</"
+"a> if you want to accept AMEX transactions"
+msgstr ""
+"Kontaktirajte podršku na <a href=\"podrska@allsecure.rs\">podrska@allsecure."
+"rs</a> ukoliko želite da prihvatate AMEX transakcije"
+
+#: allsecure_woo.php:243
+msgid "VISA"
+msgstr ""
+
+#: allsecure_woo.php:244
+msgid "MASTER"
+msgstr ""
+
+#: allsecure_woo.php:245
+msgid "MAESTRO"
+msgstr ""
+
+#: allsecure_woo.php:246
+msgid "AMEX"
+msgstr ""
+
+#: allsecure_woo.php:247
+msgid "DINERS"
+msgstr ""
+
+#: allsecure_woo.php:248
+msgid "JCB"
+msgstr ""
+
+#: allsecure_woo.php:321 allsecure_woo.php:369
+msgid "Cardholder not valid"
+msgstr "Uneti podaci o korisniku kartice nisu ispravni"
+
+#: allsecure_woo.php:358
+msgid "Cancel"
+msgstr "Otkaži"
+
+#: allsecure_woo.php:373
+msgid "Merchant"
+msgstr "Prodavac"
+
+#: allsecure_woo.php:374
+msgid "This is the TEST MODE. No money will be charged"
+msgstr "TESTNI REŽIM. Novac neće biti naplaćen"
+
+#: allsecure_woo.php:412
+#, php-format
+msgid ""
+"AllSecure Transaction Successful. The Transaction ID was %s and Payment "
+"Status %s. Payment type was %s. Autorizacion bank code: %s"
+msgstr ""
+"Uspešna transakcija. ID transakcije: %s , Status: %s. Tip plaćanja: %s. "
+"Autorizacioni kod: %s"
+
+#: allsecure_woo.php:413
+#, php-format
+msgid "Transaction Successful. The status message <b>%s</b>"
+msgstr "Transakcija je uspešna. Odgovor glasi: <b>%s</b>"
+
+#: allsecure_woo.php:445
+#, php-format
+msgid "AllSecure Transaction Failed. The Transaction Status %s"
+msgstr "AllSecure Transaction Failed. The Transaction Status %s"
+
+#: allsecure_woo.php:487
+#, php-format
+msgid ""
+"AllSecure Capture Processed Successful. The Capture ID was %s and Request "
+"Status => %s"
+msgstr "Kompletiranje (CP) Uspešno. ID transakcije: %s Status: %s"
+
+#: allsecure_woo.php:492
+#, php-format
+msgid ""
+"AllSecure Capture Request Failed. The Capture Status => %s. Code is == %s"
+msgstr "Kompletiranje (CP) neuspešno. Status: %s Kod: %s "
+
+#: allsecure_woo.php:529
+#, php-format
+msgid ""
+"AllSecure Reversal Processed Successful. The Reversal ID was: %s and Request "
+"Status: %s"
+msgstr "Otkazivanje (RV) uspešno. ID transakcije: %s Status: %s"
+
+#: allsecure_woo.php:534
+#, php-format
+msgid "AllSecure Reversal Request Failed. The Reversal Status: %s. Code is: %s"
+msgstr "Otkazivanje (RV) neuspešno. Status: %s Kod: %s "
+
+#: allsecure_woo.php:575
+#, php-format
+msgid ""
+"AllSecure Refund Processed Successful. The Refund ID: %s and Request Status: "
+"%s"
+msgstr "Refundacija (RF) uspešno. ID transakcije: %s Status: %s"
+
+#: allsecure_woo.php:580
+#, php-format
+msgid "AllSecure Refund Request Failed. The Refund Status: %s"
+msgstr "Refundacija (RF) neuspešna. Status: %s "
+
+#: allsecure_woo.php:610
+#, php-format
+msgid ""
+"<strong>%s</strong> is enabled and WooCommerce is not forcing the SSL "
+"certificate on your checkout page. Please ensure that you have a valid SSL "
+"certificate and that you are <a href=\\\"%s\\\">forcing the checkout pages "
+"to be secured.</a>"
+msgstr ""
+"<strong>%s</strong> modul je omogućen. Molimo proverite validnost vašeg SSL "
+"sertifikata i da ste ga <a href=\"%s\">primenili kako bi vaša checkout "
+"strana bila sigurna.</a>"
+
+#: allsecure_woo.php:646
+#, php-format
+msgid "Transaction Unsuccessful. The status message <b>%s</b>"
+msgstr "Neuspešna transakcije. Odgovor glasi: <b>%s</b>"
+
+#: allsecure_woo.php:657
+msgid "Transaction details"
+msgstr "Detalji transakcije"
+
+#: allsecure_woo.php:659
+msgid "Transaction Codes"
+msgstr "Autorizacioni kodovi"
+
+#: allsecure_woo.php:670
+msgid "Card Type"
+msgstr "Tip kartice"
+
+#: allsecure_woo.php:676
+msgid "Transaction Time"
+msgstr "Vreme transakcije"
+
+# ###
+#: includes/allsecure_additional.php:10
+msgid "AllSecure Capture"
+msgstr "AllSecure Capture"
+
+#: includes/allsecure_additional.php:11 includes/allsecure_additional.php:22
+msgid "AllSecure Reverse"
+msgstr "AllSecure Reverse"
+
+#: includes/allsecure_additional.php:30
+msgctxt "WooCommerce Order Status"
+msgid "preauth"
+msgstr ""
+
+#: includes/allsecure_additional.php:35
+#, php-format
+msgid "Preauth <span class=\"count\">(%s)</span>"
+msgid_plural "Preauth <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/allsecure_additional.php:41
+msgctxt "WooCommerce Order Status"
+msgid "Accepted"
+msgstr ""
+
+#: includes/allsecure_additional.php:46
+#, php-format
+msgid "Accepted <span class=\"count\">(%s)</span>"
+msgid_plural "Accepted <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/allsecure_additional.php:52
+msgctxt "WooCommerce Order Status"
+msgid "Reversed"
+msgstr ""
+
+#: includes/allsecure_additional.php:57
+#, php-format
+msgid "Reversed <span class=\"count\">(%s)</span>"
+msgid_plural "Reversed <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/allsecure_additional.php:65
+msgctxt "Preauth Order Status"
+msgid "Preauth"
+msgstr ""
+
+#: includes/allsecure_additional.php:66
+msgctxt "Accepted Order Status"
+msgid "Accepted"
+msgstr ""
+
+#: includes/allsecure_additional.php:67
+msgctxt "Reversed Order Status"
+msgid "Reversed"
+msgstr ""
+
+# ####: includes/error_list.php
+#: includes/error_list.php:17
+msgid ""
+"The account holder entered does not match your name. Please use an account "
+"that is registered on your name"
+msgstr ""
+"Ime korisnika metoda plaćanja se ne poklapa sa vašim imenom. Molimo vas da "
+"koristite metod plaćanja koji glasi na vaše ime"
+
+#: includes/error_list.php:18 includes/error_list.php:19
+#: includes/error_list.php:20 includes/error_list.php:21
+#: includes/error_list.php:22 includes/error_list.php:23
+#: includes/error_list.php:24 includes/error_list.php:25
+#: includes/error_list.php:26 includes/error_list.php:27
+#: includes/error_list.php:28 includes/error_list.php:29
+#: includes/error_list.php:30 includes/error_list.php:31
+#: includes/error_list.php:32 includes/error_list.php:33
+#: includes/error_list.php:34 includes/error_list.php:36
+#: includes/error_list.php:37 includes/error_list.php:38
+#: includes/error_list.php:39 includes/error_list.php:40
+#: includes/error_list.php:41 includes/error_list.php:42
+#: includes/error_list.php:43 includes/error_list.php:44
+#: includes/error_list.php:45
+msgid ""
+"Unfortunately, the card/account data you entered was not correct. Please try "
+"again"
+msgstr "Uneti podaci o platnoj kartici nisu ispravni. Molimo pokušajte ponovo"
+
+#: includes/error_list.php:35
+msgid ""
+"Unfortunately, the credit card you entered can not be accepted. Please "
+"contact your bank"
+msgstr ""
+"Kartica koju ste koristili ne može biti prihvaćena. Molimo kontaktirajte "
+"svoju banku"
+
+#: includes/error_list.php:46 includes/error_list.php:47
+#: includes/error_list.php:48 includes/error_list.php:49
+#: includes/error_list.php:50 includes/error_list.php:51
+#: includes/error_list.php:52 includes/error_list.php:53
+#: includes/error_list.php:54 includes/error_list.php:55
+#: includes/error_list.php:56 includes/error_list.php:57
+#: includes/error_list.php:58 includes/error_list.php:59
+#: includes/error_list.php:60 includes/error_list.php:61
+#: includes/error_list.php:62 includes/error_list.php:63
+#: includes/error_list.php:65 includes/error_list.php:66
+#: includes/error_list.php:67 includes/error_list.php:68
+#: includes/error_list.php:69 includes/error_list.php:70
+#: includes/error_list.php:71 includes/error_list.php:72
+#: includes/error_list.php:73 includes/error_list.php:74
+#: includes/error_list.php:75 includes/error_list.php:76
+#: includes/error_list.php:77 includes/error_list.php:78
+#: includes/error_list.php:79 includes/error_list.php:80
+#: includes/error_list.php:81 includes/error_list.php:82
+msgid ""
+"Unfortunately, the credit card you entered can not be accepted. Please "
+"choose a different card or payment method"
+msgstr ""
+"Plaćanje ovom karticom nije moguće. Pokušajte plaćanje drugom karticom ili "
+"izaberite drugi metod plaćanja"
+
+#: includes/error_list.php:64
+msgid ""
+"Unfortunately, the credit card you entered can not be accepted. Please "
+"choose a different card or payment methodD"
+msgstr ""
+"Plaćanje ovom karticom nije moguće. Pokušajte plaćanje drugom karticom ili "
+"izaberite drugi metod plaćanja"
+
+#: includes/error_list.php:83
+msgid ""
+"Unfortunately, the credit card you entered is expired. Please choose a "
+"different card or payment method"
+msgstr ""
+"Transakcija je odbijena. Kartica koju ste uneli je istekla. Molimo pokušajte "
+"drugom karticom ili izaberite drugi metod plaćanja"
+
+#: includes/error_list.php:84 includes/error_list.php:85
+#: includes/error_list.php:86
+msgid "Unfortunately, the CVV/CVC you entered is not correct. Please try again"
+msgstr ""
+"Transakcija je odbijena. CVV kod koji ste uneli nije validan. Proverite "
+"svoje podatke i pokušajte ponovo"
+
+#: includes/error_list.php:87 includes/error_list.php:88
+msgid ""
+"Unfortunately, the expiration date you entered is not correct. Please try "
+"again"
+msgstr ""
+"Transakcija je odbijena. Datum isteka kartice nije ispravan. Pokušajte ponovo"
+
+#: includes/error_list.php:89
+msgid ""
+"Unfortunately, the limit of your credit card is exceeded. Please choose a "
+"different card or payment method"
+msgstr ""
+"Transakcija je odbijena. Premašen je limit na ovoj kartici. Molimo Vas da "
+"transakciju izvršite drugom karticom ili drugim metodom plaćanja"
+
+#: includes/error_list.php:90 includes/error_list.php:91
+#: includes/error_list.php:92 includes/error_list.php:93
+#: includes/error_list.php:94 includes/error_list.php:95
+#: includes/error_list.php:96 includes/error_list.php:97
+#: includes/error_list.php:98
+msgid ""
+"Unfortunately, your 3D security authentication failed. Please contact your "
+"bank before trying again"
+msgstr ""
+"Vaša 3D Secure autentifikacija nije uspela. Molimo pozovite banku koja vam "
+"je izdala karticu pre nego što ponovo pokušate plaćanje"
+
+#: includes/error_list.php:99 includes/error_list.php:100
+#: includes/error_list.php:101 includes/error_list.php:102
+#: includes/error_list.php:103 includes/error_list.php:104
+#: includes/error_list.php:105 includes/error_list.php:106
+#: includes/error_list.php:107 includes/error_list.php:108
+#: includes/error_list.php:109
+msgid ""
+"Unfortunately, there has been an error while processing your request. Please "
+"try later later or try with another card or use card that its not 3D Secure"
+msgstr ""
+"Transakcija je odbijena. Postoji trenutni tehnički problem u 3D-Secure "
+"okruženju. Molimo pokušajte ponovo kasnije, ili koristite karticu koja nije "
+"3D-Secure"
+
+#: includes/error_list.php:110
+msgid ""
+"Unfortunately, there has been an error while processing your request. Please "
+"try again"
+msgstr ""
+"Transakcija je odbijena. Metod plaćanja nije podržan. Kontaktirajte nas"
+
+#: includes/error_list.php:111 includes/error_list.php:112
+#: includes/error_list.php:113 includes/error_list.php:114
+#: includes/error_list.php:115
+msgid ""
+"Unfortunately, your credit limit is exceeded. Please choose a different card "
+"or payment method"
+msgstr ""
+"Transakcija je odbijena. Prekoračen je dozvoljeni limit na vašem računu. "
+"Molimo pokušajte drugom karticom ili metodom plaćanja"
+
+#: includes/error_list.php:116 includes/error_list.php:117
+#: includes/error_list.php:118 includes/error_list.php:119
+#: includes/error_list.php:120 includes/error_list.php:121
+#: includes/error_list.php:122 includes/error_list.php:123
+msgid ""
+"Limit of transaction is exceeded. Please try again in one hour or contact us"
+msgstr ""
+"Maksimalni broj transakcija je premašen. Pokušajte ponovo nešto kasnije"
+
+#: includes/error_list.php:124 includes/error_list.php:125
+#: includes/error_list.php:126
+msgid ""
+"Unfortunately, your transaction has failed. Please choose a different card "
+"or payment method"
+msgstr ""
+"Transakcija je odbijena. Molimo pokušajte ponovo sa drugom karticom ili "
+"metodom plaćanja"
+
+#: includes/error_list.php:127
+msgid ""
+"Unfortunately, your transaction has failed. Please choose a different card "
+"or contact us"
+msgstr ""
+"Nažalost transakcija je odbijena. Molimo vas da pokušate drugom karticom ili "
+"nas kontaktirajte"
+
+#: includes/error_list.php:128 includes/error_list.php:129
+msgid ""
+"We are sorry. We could no accept your card as its origin does not match your "
+"address"
+msgstr "Transakcija je odbijena. Neispravni podaci o adresi"
+
+#: includes/error_list.php:130 includes/error_list.php:131
+msgid ""
+"You cancelled the payment prior to its execution. Please try again later"
+msgstr "Prekinuli ste proces plaćanja pre kraja. Molimo vas da pokušate ponovo"
+
+#: includes/error_list.php:132
+msgid "Session timeout. Please try again later"
+msgstr ""
+"Isteklo dozvoljeno vreme za završetak transakcije. Molimo pokušajte ponovo "
+"nešto kasnije"
+
+#: includes/error_list.php:133 includes/error_list.php:134
+msgid ""
+"Recurring transactions have been deactivated for this credit card. Please "
+"register another card"
+msgstr ""
+"Transakcija je odbijena. Korisnik je zahtevao od svoje banke da onemogući "
+"naplaćivanje ponavljajućih plaćanja. Pokušajte drugom karticom ili metodom "
+"plaćanja"
+
+#: includes/error_list.php:135
+msgid ""
+"Unfortunately, your transaction has been declined due to invalid data. "
+"Please choose a different card"
+msgstr ""
+"Transakcija je odbijena. Molimo vas da proverite podatke i pokušajte ponovo"
+
+#: includes/error_list.php:136 includes/error_list.php:137
+#: includes/error_list.php:138 includes/error_list.php:139
+#: includes/error_list.php:140 includes/error_list.php:141
+#: includes/error_list.php:142 includes/error_list.php:143
+#: includes/error_list.php:144
+msgid ""
+"Unfortunately, your transaction has failed. Please check the personal data "
+"you entered"
+msgstr ""
+"Ova transakcija je odbijena. Proverite unesene podatke, i pokušajte ponovo"
+
+#: includes/error_list.php:145 includes/error_list.php:146
+#: includes/error_list.php:147 includes/error_list.php:148
+#: includes/error_list.php:149 includes/error_list.php:150
+#: includes/error_list.php:151 includes/error_list.php:152
+#: includes/error_list.php:153 includes/error_list.php:154
+#: includes/error_list.php:155 includes/error_list.php:156
+#: includes/error_list.php:157 includes/error_list.php:158
+#: includes/error_list.php:159 includes/error_list.php:160
+#: includes/error_list.php:161 includes/error_list.php:162
+#: includes/error_list.php:163 includes/error_list.php:164
+#: includes/error_list.php:165 includes/error_list.php:166
+#: includes/error_list.php:167 includes/error_list.php:168
+#: includes/error_list.php:169 includes/error_list.php:170
+#: includes/error_list.php:171 includes/error_list.php:172
+#: includes/error_list.php:173 includes/error_list.php:174
+#: includes/error_list.php:175 includes/error_list.php:176
+#: includes/error_list.php:177 includes/error_list.php:178
+#: includes/error_list.php:179 includes/error_list.php:180
+#: includes/error_list.php:181 includes/error_list.php:182
+#: includes/error_list.php:183 includes/error_list.php:184
+#: includes/error_list.php:185 includes/error_list.php:186
+#: includes/error_list.php:187 includes/error_list.php:188
+#: includes/error_list.php:189 includes/error_list.php:190
+#: includes/error_list.php:191 includes/error_list.php:192
+#: includes/error_list.php:193 includes/error_list.php:194
+#: includes/error_list.php:195 includes/error_list.php:196
+#: includes/error_list.php:197 includes/error_list.php:198
+#: includes/error_list.php:199 includes/error_list.php:200
+#: includes/error_list.php:201 includes/error_list.php:202
+#: includes/error_list.php:203 includes/error_list.php:204
+#: includes/error_list.php:205 includes/error_list.php:206
+#: includes/error_list.php:207 includes/error_list.php:208
+#: includes/error_list.php:209 includes/error_list.php:210
+#: includes/error_list.php:211 includes/error_list.php:212
+#: includes/error_list.php:213 includes/error_list.php:214
+#: includes/error_list.php:215 includes/error_list.php:216
+#: includes/error_list.php:217 includes/error_list.php:218
+#: includes/error_list.php:219 includes/error_list.php:220
+#: includes/error_list.php:221 includes/error_list.php:222
+#: includes/error_list.php:223 includes/error_list.php:224
+#: includes/error_list.php:225 includes/error_list.php:226
+#: includes/error_list.php:227 includes/error_list.php:228
+#: includes/error_list.php:229 includes/error_list.php:230
+#: includes/error_list.php:231 includes/error_list.php:232
+#: includes/error_list.php:233 includes/error_list.php:234
+#: includes/error_list.php:235 includes/error_list.php:236
+#: includes/error_list.php:237 includes/error_list.php:238
+#: includes/error_list.php:239 includes/error_list.php:240
+#: includes/error_list.php:241 includes/error_list.php:242
+#: includes/error_list.php:243 includes/error_list.php:244
+#: includes/error_list.php:245 includes/error_list.php:246
+#: includes/error_list.php:247 includes/error_list.php:248
+#: includes/error_list.php:249 includes/error_list.php:250
+#: includes/error_list.php:251 includes/error_list.php:252
+#: includes/error_list.php:253 includes/error_list.php:254
+#: includes/error_list.php:255 includes/error_list.php:256
+#: includes/error_list.php:257 includes/error_list.php:258
+#: includes/error_list.php:259 includes/error_list.php:260
+#: includes/error_list.php:261 includes/error_list.php:262
+#: includes/error_list.php:263 includes/error_list.php:264
+#: includes/error_list.php:265 includes/error_list.php:266
+#: includes/error_list.php:267 includes/error_list.php:268
+#: includes/error_list.php:269 includes/error_list.php:270
+#: includes/error_list.php:271 includes/error_list.php:272
+#: includes/error_list.php:273 includes/error_list.php:274
+#: includes/error_list.php:275 includes/error_list.php:276
+#: includes/error_list.php:277 includes/error_list.php:278
+#: includes/error_list.php:279 includes/error_list.php:280
+#: includes/error_list.php:281 includes/error_list.php:282
+#: includes/error_list.php:283 includes/error_list.php:284
+#: includes/error_list.php:285 includes/error_list.php:286
+#: includes/error_list.php:287 includes/error_list.php:288
+#: includes/error_list.php:289 includes/error_list.php:290
+#: includes/error_list.php:291 includes/error_list.php:292
+#: includes/error_list.php:293 includes/error_list.php:294
+#: includes/error_list.php:295 includes/error_list.php:296
+#: includes/error_list.php:297 includes/error_list.php:298
+#: includes/error_list.php:299 includes/error_list.php:300
+#: includes/error_list.php:301 includes/error_list.php:302
+#: includes/error_list.php:303 includes/error_list.php:304
+#: includes/error_list.php:305 includes/error_list.php:306
+#: includes/error_list.php:307 includes/error_list.php:308
+#: includes/error_list.php:309 includes/error_list.php:310
+#: includes/error_list.php:311 includes/error_list.php:312
+#: includes/error_list.php:313 includes/error_list.php:314
+#: includes/error_list.php:315 includes/error_list.php:316
+#: includes/error_list.php:317 includes/error_list.php:318
+#: includes/error_list.php:319 includes/error_list.php:320
+#: includes/error_list.php:321 includes/error_list.php:322
+#: includes/error_list.php:323 includes/error_list.php:335
+msgid "Unfortunately, your transaction has failed. Please try again"
+msgstr "Transakcija je odbijena. Molimo vas da pokušate ponovo"
+
+#: includes/error_list.php:324 includes/error_list.php:325
+#: includes/error_list.php:326 includes/error_list.php:328
+#: includes/error_list.php:329 includes/error_list.php:330
+#: includes/error_list.php:331 includes/error_list.php:332
+#: includes/error_list.php:333 includes/error_list.php:334
+msgid ""
+"Transaction has failed due to communication reasons. Please try again after "
+"some time"
+msgstr ""
+"Transakcije nije uspela zbog problema u komunikaciji sa eksternim procesorima"
+
+#: includes/error_list.php:327
+msgid ""
+"Unfortunately, your transaction has failed. Please check your tansaction"
+msgstr ""
+"Transakcija je odbijena. Molimo vas da proverite sa svojom bankom pre nego "
+"pokušate ponovo"
+
+#: includes/error_list.php:336 includes/error_list.php:337
+#: includes/error_list.php:338 includes/error_list.php:339
+#: includes/error_list.php:340 includes/error_list.php:341
+#: includes/error_list.php:342 includes/error_list.php:343
+#: includes/error_list.php:344 includes/error_list.php:345
+#: includes/error_list.php:346 includes/error_list.php:347
+#: includes/error_list.php:348 includes/error_list.php:349
+#: includes/error_list.php:350 includes/error_list.php:351
+#: includes/error_list.php:352 includes/error_list.php:353
+#: includes/error_list.php:354 includes/error_list.php:355
+#: includes/error_list.php:356 includes/error_list.php:357
+#: includes/error_list.php:358 includes/error_list.php:359
+#: includes/error_list.php:360 includes/error_list.php:361
+#: includes/error_list.php:362 includes/error_list.php:363
+#: includes/error_list.php:364 includes/error_list.php:365
+#: includes/error_list.php:366 includes/error_list.php:367
+#: includes/error_list.php:368 includes/error_list.php:369
+#: includes/error_list.php:370 includes/error_list.php:371
+#: includes/error_list.php:372 includes/error_list.php:373
+#: includes/error_list.php:374 includes/error_list.php:375
+#: includes/error_list.php:376 includes/error_list.php:377
+#: includes/error_list.php:378 includes/error_list.php:379
+#: includes/error_list.php:380 includes/error_list.php:381
+#: includes/error_list.php:382 includes/error_list.php:383
+#: includes/error_list.php:384 includes/error_list.php:385
+#: includes/error_list.php:386 includes/error_list.php:387
+#: includes/error_list.php:388 includes/error_list.php:389
+#: includes/error_list.php:390 includes/error_list.php:391
+#: includes/error_list.php:392 includes/error_list.php:393
+#: includes/error_list.php:394 includes/error_list.php:395
+#: includes/error_list.php:396 includes/error_list.php:397
+#: includes/error_list.php:398 includes/error_list.php:399
+#: includes/error_list.php:400 includes/error_list.php:401
+#: includes/error_list.php:402 includes/error_list.php:403
+#: includes/error_list.php:404 includes/error_list.php:405
+#: includes/error_list.php:406 includes/error_list.php:407
+#: includes/error_list.php:408 includes/error_list.php:409
+#: includes/error_list.php:410 includes/error_list.php:411
+msgid "Transaction declined. Contact us for more details"
+msgstr ""
+"Transakcija je odbijena. Molimo vas da nas kontaktirate za više detalja o "
+"razlozima"
+
+#: includes/error_list.php:412 includes/error_list.php:413
+msgid ""
+"Unfortunately, your transaction has failed. Please try again later or choose "
+"a different card"
+msgstr "Ova transakcija je odbijena. Pokušajte ponovo nešto kasnije"
+
+#: includes/error_list.php:414 includes/error_list.php:415
+msgid ""
+"Giropay is not supported for this transaction. Please choose a different "
+"payment method"
+msgstr ""
+"Giropay ne podržava ovu transakciju. Molimo izaberite drugačiji metod "
+"plaćanja"
+
+#: includes/error_list.php:416 includes/error_list.php:417
+#: includes/error_list.php:418
+msgid "Transaction can not be captured"
+msgstr "Transakcija ne može biti kompletirana"
+
+#: includes/error_list.php:419 includes/error_list.php:420
+msgid "Card holder has advised his bank to stop this recurring payment"
+msgstr ""
+"Korisnik je zahtevao od svoje banke da prestane sa naplaćivanjem "
+"ponavljajućih plaćanja"
+
+#: includes/error_list.php:421 includes/error_list.php:422
+#: includes/error_list.php:423 includes/error_list.php:424
+#: includes/error_list.php:425 includes/error_list.php:426
+#: includes/error_list.php:427 includes/error_list.php:428
+#: includes/error_list.php:429
+msgid "Transaction can not be refunded or reversed"
+msgstr "Transakciju nije moguće refundirati ili otkazati"
+
+#: includes/error_list.php:430 includes/error_list.php:431
+msgid "Receipt can not be performed"
+msgstr "Receipt can not be performed"
+
+#: includes/error_list.php:432
+msgid ""
+"Unfortunately, your transaction has failed. Please enter a valid telephone "
+"number"
+msgstr "Transakcija je odbijena. Molimo unesite ispravan broj telefona"
+
+#~ msgid ""
+#~ "Card data is tokenized on the PCI-DSS certified platform. At no stage "
+#~ "card data is available to the merchant"
+#~ msgstr ""
+#~ "Prilikom unošenja podataka o platnoj kartici, informacije se, primenom "
+#~ "najsavremenijeg sistema tokenizacije, unose direktno u PCI sertifikovanu "
+#~ "platformu. Ni jednog trenutka podaci o platnoj kartici nisu dostupni "
+#~ "trgovcu"
+
+#~ msgid ""
+#~ "Your SEPA Mandate is not valid. Please choose different payment method"
+#~ msgstr ""
+#~ "Vaš SEPA mandat je nevažeći. Molimo izaberite drugačiji metod plaćanja"
+
+#~ msgid "ERROR_UNKNOWN"
+#~ msgstr ""
+#~ "Transakcija nije uspela iz nestandardnog razloga. Pokušajte ponovo nešto "
+#~ "kasnije"
