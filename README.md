@@ -1,4 +1,4 @@
-# AllSecure Woo™ Plugin
+# AllSecure OPEN Woo™ Plugin
 
 Accept payments in your WooCommerce store using AllSecure OPEN Platform.
 
