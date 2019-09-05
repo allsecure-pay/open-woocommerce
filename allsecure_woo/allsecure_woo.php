@@ -300,7 +300,7 @@ function init_woocommerce_allsecure() {
 			);
 			if( !is_wp_error( $gtwresponse ) ) {
 				$status = json_decode($gtwresponse['body']);
-				if($status->id){
+				if(isset($status->id)){
 					$lang = strtolower(substr(get_bloginfo('language'), 0, 2 ));
 					echo '<script src="'.$this->allsecure_url.'/v1/paymentWidgets.js?checkoutId='.$status->id.'"></script>';
 					echo '<script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>';
@@ -377,7 +377,9 @@ function init_woocommerce_allsecure() {
 					echo '</div>';
 				}
 				else {
-					return false;
+					wc_add_notice( __( 'Configuration error', 'allsecure_woo' ), 'error' );
+					wp_safe_redirect( wc_get_page_permalink( 'cart' ) );
+					// return false;
 				}
 			}
 		}
