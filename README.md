@@ -1,11 +1,11 @@
 # AllSecure OPEN Woo™ Plugin
 
-Accept payments in your WooCommerce store using AllSecure OPEN Platform.
+Accept payments in your WooCommerce store using AllSecure **OPEN** Platform.
 
 Current version: 1.4.3
 Compatible with WooCommerce <= 3.6.4
 
-See a fully functional WooCommerce <a href="http://demo.allsecpay.xyz/cart/open/woo" target="_new">demo store</a> with AllSecure OPEN as a payment gateway.
+See a fully functional WooCommerce <a href="http://demo.allsecpay.xyz/cart/open/woo" target="_new">demo store</a> with AllSecure **OPEN** as a payment gateway.
 
 ## Version History
 
