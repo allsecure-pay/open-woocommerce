@@ -60,7 +60,7 @@ function init_woocommerce_allsecure() {
 			$this->shopURL			= $this->settings['shop_url'];
 			$this->allsecureID		= $this->settings['allsecure_id'];
 			$this->version_tracker	= $this->settings['version_tracker'];
-			$this->cards			= implode(' ', $this->settings['card_supported']);
+			
 			$this->woocommerce_version 	= $woocommerce->version;
 			$this->return_url   	= str_replace( 'https:', 'http:', add_query_arg( 'wc-api', 'allsecure_payment', home_url( '/' ) ) );
 			
@@ -235,7 +235,7 @@ function init_woocommerce_allsecure() {
 				),
 				'card_supported' => array(
 					'title' => __('Accepted Cards', 'allsecure_woo'),
-					'default' => 'VISA',
+					'default' => array('VISA', 'MASTER', 'MAESTRO'),
 					'description' => __( 'Contact support at <a href="support@allsecpay.com">support@allsecpay.com</a> if you want to accept AMEX transactions', 'allsecure_woo' ),
 					'css'   => 'height: 100%;',
 					'type' => 'multiselect',
@@ -373,7 +373,7 @@ function init_woocommerce_allsecure() {
 					echo '<div id="allsecure_merchant_info"><b>'.__('Merchant', 'allsecure_woo' ).': </b>'. $this->merchantName.'</div>';
 					if ($this->operation == 'test') echo '<div class="testmode">' . __( 'This is the TEST MODE. No money will be charged', 'allsecure_woo' ) . '</div>';
 					echo '<div id="allsecure_payment_container">';
-					echo '<form action="'.$this->return_url.'" class="paymentWidgets">'. $this->cards .'</form>';
+					echo '<form action="'.$this->return_url.'" class="paymentWidgets">'. implode(' ', $this->settings['card_supported']) .'</form>';
 					echo '</div>';
 				}
 				else {
