@@ -4,7 +4,7 @@
 * Plugin URI: https://www.allsecpay.com
 * Author: AllSecure 
 * Description: WooCommerce Plugin for accepting payments through AllSecure OPEN Platform.
-* Version:     1.4.2
+* Version:     1.4.4
 * Tested up to: 5.1
 * WC requires at least: 3.0
 * WC tested up to: 3.6.4
@@ -21,11 +21,13 @@ function init_woocommerce_allsecure() {
 	load_plugin_textdomain( 'allsecure_woo', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/');
 	if ( ! class_exists( 'WC_Payment_Gateway' ) ) { return; }
 	class woocommerce_allsecure extends WC_Payment_Gateway {
+		
 		/**
 		 * Main function
 		 */
 		public function __construct() {
 			global $woocommerce;
+			
 			$this->id				= 'allsecure';
 			$this->method_title 	= __( 'AllSecure Credit Cards', 'allsecure_woo' );
 			// $icon 				= plugins_url( '/assets/images/general/allsecure.svg', __FILE__ );
@@ -60,10 +62,11 @@ function init_woocommerce_allsecure() {
 			$this->shopURL			= $this->settings['shop_url'];
 			$this->allsecureID		= $this->settings['allsecure_id'];
 			$this->version_tracker	= $this->settings['version_tracker'];
-			
+			if ($this->settings['card_supported'] !== NULL) {
+				$this->cards = implode(' ', $this->settings['card_supported']);
+			}
 			$this->woocommerce_version 	= $woocommerce->version;
 			$this->return_url   	= str_replace( 'https:', 'http:', add_query_arg( 'wc-api', 'allsecure_payment', home_url( '/' ) ) );
-			
 			
 			/* Actions */
 			add_action( 'init', array($this, 'allsecure_process') );
@@ -76,8 +79,6 @@ function init_woocommerce_allsecure() {
 			/* add_action to parse values to thankyou*/
 			add_action( 'woocommerce_thankyou', array( $this, 'report_payment' ) );
 			add_action( 'woocommerce_thankyou', array( $this,'parse_value_allsecure_success_page') );
-			
-			add_filter ('woocommerce_gateway_icon', array( $this,'allsecure_get_icon'));
 			/* add_action to parse values when error */
 			add_action( 'woocommerce_before_checkout_form', array( $this,'parse_value_allsecure_error'), 10 );
 			/* Lets check for SSL */
@@ -235,7 +236,11 @@ function init_woocommerce_allsecure() {
 				),
 				'card_supported' => array(
 					'title' => __('Accepted Cards', 'allsecure_woo'),
-					'default' => array('VISA', 'MASTER', 'MAESTRO'),
+					'default' => array(
+						'VISA',
+						'MASTER',
+						'MAESTRO'
+					),
 					'description' => __( 'Contact support at <a href="support@allsecpay.com">support@allsecpay.com</a> if you want to accept AMEX transactions', 'allsecure_woo' ),
 					'css'   => 'height: 100%;',
 					'type' => 'multiselect',
@@ -251,13 +256,19 @@ function init_woocommerce_allsecure() {
 			);
 		}
 		/* Custom Credit Card Icons on a checkout page */
+		public function get_icon() {
+			$icon_html = $this->allsecure_get_icon();
+			return apply_filters( 'woocommerce_gateway_icon', $icon_html, $this->id );
+		}
+		
 		function allsecure_get_icon() {
 			$selectedcards = $this->settings['card_supported'];
 			$icon_html = '';
+					
 			if ( isset( $selectedcards ) && '' !== $selectedcards ) {
 				foreach ( $selectedcards as $card ) {
-					$icon = plugins_url(). '/allsecure_woo/assets/images/general/' .strtolower( $card ) . '.svg';
-					$icon_html .= '<img src="' . $icon . '" alt="' . strtolower( $card ) . '" title="' . strtolower( $card ) . '" style="height:30px; margin:5px 0px 5px 10px; vertical-align: middle; float: none; display: inline; text-align: right;" />';
+					$icons = plugins_url(). '/allsecure_woo/assets/images/general/' .strtolower( $card ) . '.svg';
+					$icon_html .= '<img src="' . $icons . '" alt="' . strtolower( $card ) . '" title="' . strtolower( $card ) . '" style="height:30px; margin:5px 0px 5px 10px; vertical-align: middle; float: none; display: inline; text-align: right;" />';
 				}
 			}
 			return $icon_html;
@@ -373,7 +384,7 @@ function init_woocommerce_allsecure() {
 					echo '<div id="allsecure_merchant_info"><b>'.__('Merchant', 'allsecure_woo' ).': </b>'. $this->merchantName.'</div>';
 					if ($this->operation == 'test') echo '<div class="testmode">' . __( 'This is the TEST MODE. No money will be charged', 'allsecure_woo' ) . '</div>';
 					echo '<div id="allsecure_payment_container">';
-					echo '<form action="'.$this->return_url.'" class="paymentWidgets">'. implode(' ', $this->settings['card_supported']) .'</form>';
+					echo '<form action="'.$this->return_url.'" class="paymentWidgets">'. $this->cards .'</form>';
 					echo '</div>';
 				}
 				else {
