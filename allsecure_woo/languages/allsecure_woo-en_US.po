@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: allsecure_woo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-28 11:27+0200\n"
-"PO-Revision-Date: 2019-07-28 11:30+0200\n"
+"POT-Creation-Date: 2019-11-08 18:42+0100\n"
+"PO-Revision-Date: 2019-11-08 18:43+0100\n"
 "Last-Translator: \n"
 "Language-Team: AllSecure <support@allsecpay.com>\n"
 "Language: en_US\n"
@@ -13,41 +13,41 @@ msgstr ""
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;_;gettext;gettext_noop;__;_e;"
 "__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;"
 "_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: allsecure_woo.php:30
+#: allsecure_woo.php:32
 msgid "AllSecure Credit Cards"
 msgstr "AllSecure Open"
 
-#: allsecure_woo.php:40
+#: allsecure_woo.php:42
 msgid "Credit Cards"
 msgstr "Credit Cards"
 
-#: allsecure_woo.php:89
+#: allsecure_woo.php:91
 msgid "AllSecure Payment Gateway"
 msgstr "AllSecure Payment Gateway"
 
-#: allsecure_woo.php:90
+#: allsecure_woo.php:92
 msgid "AllSecure Configuration Settings"
 msgstr "AllSecure Configuration Settings"
 
-#: allsecure_woo.php:101
+#: allsecure_woo.php:103
 msgid "Enable/Disable"
 msgstr "Enable/Disable"
 
-#: allsecure_woo.php:103
+#: allsecure_woo.php:105
 msgid "Enable AllSecure"
 msgstr "Enable AllSecure"
 
-#: allsecure_woo.php:107
+#: allsecure_woo.php:109
 msgid "Operation Mode"
 msgstr "Operation Mode"
 
-#: allsecure_woo.php:109
+#: allsecure_woo.php:111
 msgid ""
 "You can switch between different environments, by selecting the "
 "corresponding operation mode"
@@ -55,31 +55,31 @@ msgstr ""
 "You can switch between different environments, by selecting the "
 "corresponding operation mode"
 
-#: allsecure_woo.php:113
+#: allsecure_woo.php:115
 msgid "Test Mode"
 msgstr "Test Mode"
 
-#: allsecure_woo.php:114
+#: allsecure_woo.php:116
 msgid "Live Mode"
 msgstr "Live Mode"
 
-#: allsecure_woo.php:118
+#: allsecure_woo.php:120
 msgid "Description"
 msgstr "Description"
 
-#: allsecure_woo.php:120
+#: allsecure_woo.php:122
 msgid "This controls the description which the user sees during checkout"
 msgstr "This controls the description which the user sees during checkout"
 
-#: allsecure_woo.php:121
+#: allsecure_woo.php:123
 msgid "Pay via AllSecure"
 msgstr "Pay via AllSecure"
 
-#: allsecure_woo.php:125
+#: allsecure_woo.php:127
 msgid "API Test Credentials"
 msgstr "API Test Credentials"
 
-#: allsecure_woo.php:127
+#: allsecure_woo.php:129
 msgid ""
 "Enter your AllSecure Test API Credentials to process transactions via "
 "AllSecure. You can get your AllSecure Test Credentials via <a href=\"mailto:"
@@ -89,11 +89,11 @@ msgstr ""
 "AllSecure. You can get your AllSecure Test Credentials via <a href=\"mailto:"
 "support@allsecpay.com\">AllSecure Support</a>"
 
-#: allsecure_woo.php:130
+#: allsecure_woo.php:132
 msgid "Test Entity ID"
 msgstr "Test Entity ID"
 
-#: allsecure_woo.php:132
+#: allsecure_woo.php:134
 msgid ""
 "Please enter your AllSecure Test Entity ID. This is needed in order to take "
 "the payment"
@@ -101,11 +101,11 @@ msgstr ""
 "Please enter your AllSecure Test Entity ID. This is needed in order to take "
 "the payment"
 
-#: allsecure_woo.php:137
+#: allsecure_woo.php:139
 msgid "Test Access Token"
 msgstr "Test Access Token"
 
-#: allsecure_woo.php:139
+#: allsecure_woo.php:141
 msgid ""
 "Please enter your AllSecure Test Access Token. This is needed in order to "
 "take the payment"
@@ -113,19 +113,19 @@ msgstr ""
 "Please enter your AllSecure Test Access Token. This is needed in order to "
 "take the payment"
 
-#: allsecure_woo.php:144
+#: allsecure_woo.php:146
 msgid "Force Result Code"
 msgstr "Force Result Code"
 
-#: allsecure_woo.php:146
+#: allsecure_woo.php:148
 msgid "Simulate any result code"
 msgstr "Simulate any result code"
 
-#: allsecure_woo.php:151
+#: allsecure_woo.php:153
 msgid "API LIVE Credentials"
 msgstr "API LIVE Credentials"
 
-#: allsecure_woo.php:153
+#: allsecure_woo.php:155
 msgid ""
 "Enter your AllSecure Live API Credentials to process transactions via "
 "AllSecure. You can get your AllSecure Live Credentials via <a href=\"mailto:"
@@ -135,11 +135,11 @@ msgstr ""
 "AllSecure. You can get your AllSecure Live Credentials via <a href=\"mailto:"
 "support@allsecpay.com\">AllSecure Support</a>"
 
-#: allsecure_woo.php:156
+#: allsecure_woo.php:158
 msgid "Entity ID"
 msgstr "Entity ID"
 
-#: allsecure_woo.php:158
+#: allsecure_woo.php:160
 msgid ""
 "Please enter your AllSecure Entity ID. This is needed in order to the take "
 "payment"
@@ -147,11 +147,11 @@ msgstr ""
 "Please enter your AllSecure Entity ID. This is needed in order to the take "
 "payment"
 
-#: allsecure_woo.php:163
+#: allsecure_woo.php:165
 msgid "Access Token"
 msgstr "Access Token"
 
-#: allsecure_woo.php:165
+#: allsecure_woo.php:167
 msgid ""
 "Please enter your AllSecure Access Token. This is needed in order to take "
 "the payment"
@@ -159,95 +159,95 @@ msgstr ""
 "Please enter your AllSecure Access Token. This is needed in order to take "
 "the payment"
 
-#: allsecure_woo.php:170 allsecure_woo.php:222
+#: allsecure_woo.php:172 allsecure_woo.php:225
 msgid "<hr>"
 msgstr ""
 
-#: allsecure_woo.php:174
+#: allsecure_woo.php:176
 msgid "Merchant Info"
 msgstr "Merchant Info"
 
-#: allsecure_woo.php:176
+#: allsecure_woo.php:178
 msgid "Please enter your Merchant Info to be displayed near the payment form"
 msgstr "Please enter your Merchant Info to be displayed near the payment form"
 
-#: allsecure_woo.php:181
+#: allsecure_woo.php:183
 msgid "Merchant Email"
 msgstr "Merchant Email"
 
-#: allsecure_woo.php:183
+#: allsecure_woo.php:185
 msgid "Please enter your Merchant Email"
 msgstr "Please enter your Merchant Email"
 
-#: allsecure_woo.php:188
+#: allsecure_woo.php:190
 msgid "Shop URL"
 msgstr "Shop URL"
 
-#: allsecure_woo.php:190
+#: allsecure_woo.php:192
 msgid "Please enter your Shop URL"
 msgstr "Please enter your Shop URL"
 
-#: allsecure_woo.php:195
+#: allsecure_woo.php:197
 msgid "Allsecure ID"
 msgstr "Allsecure ID"
 
-#: allsecure_woo.php:197
+#: allsecure_woo.php:199
 msgid "Please enter your ID as displayed on your invoice from AllSecure"
 msgstr "Please enter your ID as displayed on your invoice from AllSecure"
 
-#: allsecure_woo.php:202
+#: allsecure_woo.php:204
 msgid "Version Tracker"
 msgstr "Version Tracker"
 
-#: allsecure_woo.php:204
+#: allsecure_woo.php:206
 msgid "Enable Version Tracker"
 msgstr "Enable Version Tracker"
 
-#: allsecure_woo.php:205
+#: allsecure_woo.php:207
 msgid "When enabled, you accept to share your IP, email address, etc with us"
 msgstr "When enabled, you accept to share your IP, email address, etc with us"
 
-#: allsecure_woo.php:210
+#: allsecure_woo.php:212
 msgid "Banner Type"
 msgstr "Banner Type"
 
-#: allsecure_woo.php:212
+#: allsecure_woo.php:214
 msgid "Choose type of banner you wish to use"
 msgstr "Choose type of banner you wish to use"
 
-#: allsecure_woo.php:215
+#: allsecure_woo.php:217
 msgid "No Banner"
 msgstr "No Banner"
 
-#: allsecure_woo.php:216
+#: allsecure_woo.php:218
 msgid "Light Background"
 msgstr "Light Background"
 
-#: allsecure_woo.php:217
+#: allsecure_woo.php:219
 msgid "Dark Background"
 msgstr "Dark Background"
 
-#: allsecure_woo.php:226 allsecure_woo.php:673
+#: allsecure_woo.php:229 allsecure_woo.php:720
 msgid "Payment Type"
 msgstr "Payment Type"
 
-#: allsecure_woo.php:228
+#: allsecure_woo.php:231
 msgid "Choose type of Payment you wish to use"
 msgstr "Choose type of Payment you wish to use"
 
-#: allsecure_woo.php:231
+#: allsecure_woo.php:234
 msgid "Preauthorization (PA)"
 msgstr "Preauthorization (PA)"
 
-#: allsecure_woo.php:232
+#: allsecure_woo.php:235
 msgid "Debit (DB)"
 msgstr "Debit (DB)"
 
-#: allsecure_woo.php:237
+#: allsecure_woo.php:241
 msgid "Accepted Cards"
 msgstr "Accepted Cards"
 
-#: allsecure_woo.php:239
+#: allsecure_woo.php:247
 msgid ""
 "Contact support at <a href=\"support@allsecpay.com\">support@allsecpay.com</"
 "a> if you want to accept AMEX transactions"
@@ -255,47 +255,71 @@ msgstr ""
 "Contact support at <a href=\"support@allsecpay.com\">support@allsecpay.com</"
 "a> if you want to accept AMEX transactions"
 
-#: allsecure_woo.php:243
+#: allsecure_woo.php:251
 msgid "VISA"
 msgstr ""
 
-#: allsecure_woo.php:244
+#: allsecure_woo.php:252
 msgid "MASTER"
 msgstr ""
 
-#: allsecure_woo.php:245
+#: allsecure_woo.php:253
 msgid "MAESTRO"
 msgstr ""
 
-#: allsecure_woo.php:246
+#: allsecure_woo.php:254
 msgid "AMEX"
 msgstr ""
 
-#: allsecure_woo.php:247
+#: allsecure_woo.php:255
 msgid "DINERS"
 msgstr ""
 
-#: allsecure_woo.php:248
+#: allsecure_woo.php:256
 msgid "JCB"
 msgstr ""
 
-#: allsecure_woo.php:321 allsecure_woo.php:369
+#: allsecure_woo.php:260
+msgid "Acquiring Partner"
+msgstr "Acquiring Partner"
+
+#: allsecure_woo.php:262
+msgid "Acquirer where holding Merchant Account"
+msgstr "Acquirer where holding Merchant Account"
+
+#: allsecure_woo.php:265
+msgid "UniCredit Bank Serbia"
+msgstr ""
+
+#: allsecure_woo.php:266
+msgid "WireCard Bank"
+msgstr ""
+
+#: allsecure_woo.php:267
+msgid "Payvision"
+msgstr ""
+
+#: allsecure_woo.php:347 allsecure_woo.php:395
 msgid "Cardholder not valid"
 msgstr "Cardholder not valid"
 
-#: allsecure_woo.php:358
+#: allsecure_woo.php:384
 msgid "Cancel"
 msgstr "Cancel"
 
-#: allsecure_woo.php:373
+#: allsecure_woo.php:399
 msgid "Merchant"
 msgstr "Merchant"
 
-#: allsecure_woo.php:374
+#: allsecure_woo.php:400
 msgid "This is the TEST MODE. No money will be charged"
 msgstr "This is the TEST MODE. No money will be charged"
 
-#: allsecure_woo.php:412
+#: allsecure_woo.php:406
+msgid "Configuration error"
+msgstr "Configuration error"
+
+#: allsecure_woo.php:441
 #, php-format
 msgid ""
 "AllSecure Transaction Successful. The Transaction ID was %s and Payment "
@@ -304,17 +328,17 @@ msgstr ""
 "AllSecure Transaction Successful. The Transaction ID was %s and Payment "
 "Status %s. Payment type was %s. Autorizacion bank code: %s"
 
-#: allsecure_woo.php:413
+#: allsecure_woo.php:442
 #, php-format
 msgid "Transaction Successful. The status message <b>%s</b>"
 msgstr "Transaction Successful. The status message <b>%s</b>"
 
-#: allsecure_woo.php:445
+#: allsecure_woo.php:474
 #, php-format
 msgid "AllSecure Transaction Failed. The Transaction Status %s"
 msgstr "AllSecure Transaction Failed. The Transaction Status %s"
 
-#: allsecure_woo.php:487
+#: allsecure_woo.php:516
 #, php-format
 msgid ""
 "AllSecure Capture Processed Successful. The Capture ID was %s and Request "
@@ -323,14 +347,14 @@ msgstr ""
 "AllSecure Capture Processed Successful. The Capture ID was %s and Request "
 "Status => %s"
 
-#: allsecure_woo.php:492
+#: allsecure_woo.php:521
 #, php-format
 msgid ""
 "AllSecure Capture Request Failed. The Capture Status => %s. Code is == %s"
 msgstr ""
 "AllSecure Capture Request Failed. The Capture Status => %s. Code is == %s"
 
-#: allsecure_woo.php:529
+#: allsecure_woo.php:558
 #, php-format
 msgid ""
 "AllSecure Reversal Processed Successful. The Reversal ID was: %s and Request "
@@ -339,13 +363,13 @@ msgstr ""
 "AllSecure Reversal Processed Successful. The Reversal ID was: %s and Request "
 "Status: %s"
 
-#: allsecure_woo.php:534
+#: allsecure_woo.php:563
 #, php-format
 msgid "AllSecure Reversal Request Failed. The Reversal Status: %s. Code is: %s"
 msgstr ""
 "AllSecure Reversal Request Failed. The Reversal Status: %s. Code is: %s"
 
-#: allsecure_woo.php:575
+#: allsecure_woo.php:604
 #, php-format
 msgid ""
 "AllSecure Refund Processed Successful. The Refund ID: %s and Request Status: "
@@ -354,12 +378,12 @@ msgstr ""
 "AllSecure Refund Processed Successful. The Refund ID: %s and Request Status: "
 "%s"
 
-#: allsecure_woo.php:580
+#: allsecure_woo.php:609
 #, php-format
 msgid "AllSecure Refund Request Failed. The Refund Status: %s"
 msgstr "AllSecure Refund Request Failed. The Refund Status: %s"
 
-#: allsecure_woo.php:610
+#: allsecure_woo.php:639
 #, php-format
 msgid ""
 "<strong>%s</strong> is enabled and WooCommerce is not forcing the SSL "
@@ -372,24 +396,24 @@ msgstr ""
 "certificate and that you are <a href=\"%s\">forcing the checkout pages to be "
 "secured.</a>"
 
-#: allsecure_woo.php:646
+#: allsecure_woo.php:679
 #, php-format
 msgid "Transaction Unsuccessful. The status message <b>%s</b>"
 msgstr "Transaction Unsuccessful. The status message <b>%s</b>"
 
-#: allsecure_woo.php:657
+#: allsecure_woo.php:690
 msgid "Transaction details"
 msgstr "Transaction details"
 
-#: allsecure_woo.php:659
+#: allsecure_woo.php:692
 msgid "Transaction Codes"
 msgstr "Transaction Codes"
 
-#: allsecure_woo.php:670
+#: allsecure_woo.php:717
 msgid "Card Type"
 msgstr "Card Type"
 
-#: allsecure_woo.php:676
+#: allsecure_woo.php:723
 msgid "Transaction Time"
 msgstr "Transaction Time"
 

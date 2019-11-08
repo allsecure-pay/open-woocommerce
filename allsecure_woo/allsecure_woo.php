@@ -690,14 +690,28 @@ function init_woocommerce_allsecure() {
 				<h2>". __('Transaction details', 'allsecure_woo').": </h2>
 				<ul class='woocommerce-order-overview woocommerce-thankyou-order-details order_details'>
 					<li class='woocommerce-order-overview__email email'>" . __('Transaction Codes', 'allsecure_woo' );
-						if ( isset($gwresponse->resultDetails->ConnectorTxID1) ) {
-							echo('<strong>'. $gwresponse->resultDetails->ConnectorTxID1.'</strong>');
-						}
-						if ( isset($gwresponse->resultDetails->ConnectorTxID2) ) {
-							echo('<strong>'. $gwresponse->resultDetails->ConnectorTxID2.'</strong>');
-						}
-						if ( isset($gwresponse->resultDetails->ConnectorTxID3) ) {
-							echo('<strong>'. $gwresponse->resultDetails->ConnectorTxID3.'</strong>');
+						if ($this->merchantBank == 'ucbs') {
+							if ( isset($gwresponse->resultDetails->ConnectorTxID3) ) {
+								echo('<strong>'. $gwresponse->resultDetails->ConnectorTxID3.'</strong>');
+							}
+						} else if ($this->merchantBank == 'wcrd') {
+							if ( isset($gwresponse->resultDetails->ConnectorTxID1) ) {
+								echo('<strong>'. $gwresponse->resultDetails->ConnectorTxID1.'</strong>');
+							}
+						} else if ($this->merchantBank == 'payv') {
+							if ( isset($gwresponse->resultDetails->ConnectorTxID1) ) {
+								echo('<strong>'. $gwresponse->resultDetails->ConnectorTxID1.'</strong>');
+							}
+						} else {
+							if ( isset($gwresponse->resultDetails->ConnectorTxID1) ) {
+								echo('<strong>'. $gwresponse->resultDetails->ConnectorTxID1.'</strong>');
+							}
+							if ( isset($gwresponse->resultDetails->ConnectorTxID2) ) {
+								echo('<strong>'. $gwresponse->resultDetails->ConnectorTxID2.'</strong>');
+							}
+							if ( isset($gwresponse->resultDetails->ConnectorTxID3) ) {
+								echo('<strong>'. $gwresponse->resultDetails->ConnectorTxID3.'</strong>');
+							}
 						}
 				echo "</li>
 						<li class='woocommerce-order-overview__email email'>". __('Card Type', 'allsecure_woo' ) .
