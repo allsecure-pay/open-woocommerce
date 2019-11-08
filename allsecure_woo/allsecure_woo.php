@@ -65,6 +65,7 @@ function init_woocommerce_allsecure() {
 			if ($this->settings['card_supported'] !== NULL) {
 				$this->cards = implode(' ', $this->settings['card_supported']);
 			}
+			$this->merchantBank	= $this->settings['merchant_bank'];
 			$this->woocommerce_version 	= $woocommerce->version;
 			$this->return_url   	= str_replace( 'https:', 'http:', add_query_arg( 'wc-api', 'allsecure_payment', home_url( '/' ) ) );
 			
@@ -219,6 +220,7 @@ function init_woocommerce_allsecure() {
 					),
 					'desc_tip'    => true
 				),
+							
 				'hr2' => array(
 					'title' => __( '<hr>', 'allsecure_woo' ),
 					'type' => 'title',
@@ -234,6 +236,7 @@ function init_woocommerce_allsecure() {
 					),
 					'desc_tip'    => true
 				),
+				
 				'card_supported' => array(
 					'title' => __('Accepted Cards', 'allsecure_woo'),
 					'default' => array(
@@ -252,6 +255,18 @@ function init_woocommerce_allsecure() {
 						'DINERS' => __('DINERS', 'allsecure_woo'),
 						'JCB'  => __('JCB', 'allsecure_woo'),
 					)
+				),
+				'merchant_bank' => array(
+					'title' => __('Acquiring Partner', 'allsecure_woo'),
+					'default' => 'ucbs',
+					'description' => __('Acquirer where holding Merchant Account', 'allsecure_woo'),
+					'type' => 'select',
+					'options' => array(
+						'ucbs' => __('UniCredit Bank Serbia', 'allsecure_woo'),
+						'wcrd' => __('WireCard Bank', 'allsecure_woo'),
+						'payv' => __('Payvision', 'allsecure_woo'),
+					),
+					'desc_tip'    => true
 				),
 			);
 		}
@@ -649,6 +664,9 @@ function init_woocommerce_allsecure() {
 		public function get_selected_banner (){
 			return $this->bannerType;
 		}
+		public function get_merchant_bank (){
+			return $this->merchantBank;
+		}
 		// gateway transaction details on declined trx
 		function parse_value_allsecure_error($order_id){
 			if ( isset($_REQUEST['astrxId']) ) {
@@ -725,6 +743,7 @@ function init_woocommerce_allsecure() {
 		$selected_allsecure = new woocommerce_allsecure;
 		$selectedBanner = $selected_allsecure->get_selected_banner();
 		$selectedCards = $selected_allsecure->get_selected_cards();
+		$selectedBank = $selected_allsecure->get_merchant_bank();
 		if (strpos($selectedCards, 'VISA') !== false) { $visa =  '<img src="' . plugin_dir_url( __FILE__ ) . 'assets/images/'.$selectedBanner.'/visa.svg">';} else $visa = '';
 		if (strpos($selectedCards, 'MASTER') !== false) { $master = '<img src="' . plugin_dir_url( __FILE__ ) . 'assets/images/'.$selectedBanner.'/master.svg">';} else $master = '';
 		if (strpos($selectedCards, 'MAESTRO') !== false) { $maestro = '<img src="' . plugin_dir_url( __FILE__ ) . 'assets/images/'.$selectedBanner.'/maestro.svg">';} else $maestro = '';
@@ -732,7 +751,8 @@ function init_woocommerce_allsecure() {
 		if (strpos($selectedCards, 'DINERS') !== false) {$diners = '<img src="' . plugin_dir_url( __FILE__ ) . 'assets/images/'.$selectedBanner.'/diners.svg">';} else $diners = '';
 		if (strpos($selectedCards, 'JCB') !== false) {$jcb = '<img src="' . plugin_dir_url( __FILE__ ) . 'assets/images/'.$selectedBanner.'/jcb.svg">';} else $jcb = '';
 		$allsecure  = '<a href="https://www.allsecure.rs" target="_new"><img src="' . plugin_dir_url( __FILE__ ) . 'assets/images/'.$selectedBanner.'/allsecure.svg"></a>';
-		$bank = '<a href="https://www.unicreditbank.rs/" target="_new"><img src="' . plugin_dir_url( __FILE__ ) . 'assets/images/'.$selectedBanner.'/unicredit.svg"></a>';
+				
+		$bank = '<a href="#" ><img src="' . plugin_dir_url( __FILE__ ) . 'assets/images/'.$selectedBanner.'/'.$selectedBank.'.svg"></a>';
 		$vbv = '<img src="' . plugin_dir_url( __FILE__ ) . 'assets/images/'.$selectedBanner.'/3dvbv.svg">';
 		$mcsc = '<img src="' . plugin_dir_url( __FILE__ ) . 'assets/images/'.$selectedBanner.'/3dmcsc.svg">';
 		$allsecure_cards = $visa.''.$master.''.$maestro.''.$diners.''.$amex.''.$jcb ;
