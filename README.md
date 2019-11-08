@@ -11,7 +11,7 @@ See a fully functional WooCommerce <a href="http://demo.allsecpay.xyz/cart/open/
 
 Version 1.5.0
 - Fix bug with banner images
-- Selection ofthe partner bank added
+- Selection of the partner bank added
 
 Version 1.4.4
 - Fix bug when no cards selected
