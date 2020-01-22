@@ -4,16 +4,16 @@
 * Plugin URI: https://www.allsecpay.com
 * Author: AllSecure 
 * Description: WooCommerce Plugin for accepting payments through AllSecure OPEN Platform.
-* Version:     1.5.2
-* Tested up to: 5.1
+* Version:     1.5.3
+* Tested up to: 5.3
 * WC requires at least: 3.0
-* WC tested up to: 3.6.4
+* WC tested up to: 3.8.0
 * @package AllSecure Open Woo
 */
 
 include_once( dirname( __FILE__ ) . '/includes/allsecure_additional.php' );
 add_action('plugins_loaded', 'init_woocommerce_allsecure', 0);
-define( 'ALLSECURE_VERSION', '1.5.2' );
+define( 'ALLSECURE_VERSION', '1.5.3' );
 /**
  * Init payment gateway
  */
@@ -30,6 +30,7 @@ function init_woocommerce_allsecure() {
 			
 			$this->id				= 'allsecure';
 			$this->method_title 	= __( 'AllSecure Credit Cards', 'allsecure_woo' );
+			$this->method_description = __( 'AllSecure Credit Cards payments', 'allsecure_woo' );
 			// $icon 				= plugins_url( '/assets/images/general/allsecure.svg', __FILE__ );
 			$icon_html			= $icon_html = $this->get_icon();
 			$this->icon			= $icon_html;
@@ -65,6 +66,7 @@ function init_woocommerce_allsecure() {
 			if ($this->settings['card_supported'] !== NULL) {
 				$this->cards = implode(' ', $this->settings['card_supported']);
 			}
+			$this->cards_supported	= $this->get_option('card_supported');
 			$this->merchantBank	= $this->settings['merchant_bank'];
 			$this->woocommerce_version 	= $woocommerce->version;
 			$this->return_url   	= str_replace( 'https:', 'http:', add_query_arg( 'wc-api', 'allsecure_payment', home_url( '/' ) ) );
@@ -277,11 +279,10 @@ function init_woocommerce_allsecure() {
 		}
 		
 		function allsecure_get_icon() {
-			$selectedcards = $this->settings['card_supported'];
-			$icon_html = '';
+			$icon_html = ''; 
 					
-			if ( isset( $selectedcards ) && '' !== $selectedcards ) {
-				foreach ( $selectedcards as $card ) {
+			if ( isset( $this->cards_supported ) && '' !== $this->cards_supported ) {
+				foreach ( $this->cards_supported as $card ) {
 					$icons = plugins_url(). '/allsecure_woo/assets/images/general/' .strtolower( $card ) . '.svg';
 					$icon_html .= '<img src="' . $icons . '" alt="' . strtolower( $card ) . '" title="' . strtolower( $card ) . '" style="height:30px; margin:5px 0px 5px 10px; vertical-align: middle; float: none; display: inline; text-align: right;" />';
 				}
