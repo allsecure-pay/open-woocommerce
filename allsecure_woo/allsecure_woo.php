@@ -69,8 +69,9 @@ function init_woocommerce_allsecure() {
 			$this->cards_supported	= $this->get_option('card_supported');
 			$this->merchantBank	= $this->settings['merchant_bank'];
 			$this->woocommerce_version 	= $woocommerce->version;
-			$this->return_url   	= str_replace( 'https:', 'http:', add_query_arg( 'wc-api', 'allsecure_payment', home_url( '/' ) ) );
-			
+			// $this->return_url   	= str_replace( 'https:', 'http:', add_query_arg( 'wc-api', 'allsecure_payment', home_url( '/' ) ) );
+			$this->return_url   	= add_query_arg( 'wc-api', 'allsecure_payment', home_url( '/' ) ) ;
+
 			/* Actions */
 			add_action( 'init', array($this, 'allsecure_process') );
 			add_action( 'woocommerce_api_allsecure_payment', array( $this, 'allsecure_process' ) );
@@ -714,15 +715,22 @@ function init_woocommerce_allsecure() {
 								echo('<strong>'. $gwresponse->resultDetails->ConnectorTxID3.'</strong>');
 							}
 						}
+				
 				echo "</li>
 						<li class='woocommerce-order-overview__email email'>". __('Card Type', 'allsecure_woo' ) .
 						"<strong>". $gwresponse->paymentBrand ." *** ".$gwresponse->card->last4Digits."</strong>
 						</li>
 						<li class='woocommerce-order-overview__email email'>" . __('Payment Type', 'allsecure_woo' ) .
 						"<strong>".$gwresponse->paymentType."</strong>
-						</li>
-						<li class='woocommerce-order-overview__email email'>".  __('Transaction Time', 'allsecure_woo' ) .
-						"<strong>".$gwresponse->timestamp."</strong>
+						</li>";
+						
+						/* adapt timestamp to shop timezone */
+						$shopTimezone = wc_timezone_string();
+						$responseTimestamp = new DateTime($gwresponse->timestamp, new DateTimeZone('UTC'));
+						$responseTimestamp->setTimezone(new DateTimeZone($shopTimezone));
+						echo "<li class='woocommerce-order-overview__email email'>"
+						.  __('Transaction Time', 'allsecure_woo' ) .
+						"<strong>".$responseTimestamp ->format('d-m-Y H:i:s O')."</strong>
 						</li>
 					</ul>
 				</div>";
@@ -747,6 +755,7 @@ function init_woocommerce_allsecure() {
 			}
 		}
 	}
+	
 	/* Add the gateway to WooCommerce */
 	function add_allsecure_gateway( $methods ) {
 		$methods[] = 'woocommerce_allsecure'; return $methods;
