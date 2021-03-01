@@ -4,16 +4,16 @@
 * Plugin URI: https://www.allsecpay.com
 * Author: AllSecure 
 * Description: WooCommerce Plugin for accepting payments through AllSecure OPEN Platform.
-* Version:     1.5.3
-* Tested up to: 5.3
+* Version:     1.6.0
+* Tested up to: 5.3.6
 * WC requires at least: 3.0
-* WC tested up to: 3.8.0
+* WC tested up to: 4.9.1
 * @package AllSecure Open Woo
 */
 
 include_once( dirname( __FILE__ ) . '/includes/allsecure_additional.php' );
 add_action('plugins_loaded', 'init_woocommerce_allsecure', 0);
-define( 'ALLSECURE_VERSION', '1.5.3' );
+define( 'ALLSECURE_VERSION', '1.6.0' );
 /**
  * Init payment gateway
  */
@@ -302,11 +302,21 @@ function init_woocommerce_allsecure() {
 			/* Required Order Details */
 			$amount 	= $order->get_total();
 			$currency 	= get_woocommerce_currency();
+			$billingcity = $order->get_billing_city();
+			$billingcountry = $order->get_billing_country();
+			$billingstreet1 = $order->get_billing_address_1();
+			$billingpostcode = $order->get_billing_postcode();
+			$customeremail = $order->get_billing_email();
 			$url = $this->allsecure_url."/v1/checkouts";
 			$data = "entityId=".$this->ENTITY_ID 
 			. "&amount=".$amount 
 			. "&currency=".$currency 
 			. "&merchantTransactionId=". $order_id 
+			. "&billing.city=". $billingcity
+			. "&billing.country=". $billingcountry
+			. "&billing.street1=". $billingstreet1
+			. "&billing.postcode=". $billingpostcode
+			. "&customer.email=". $customeremail
 			. "&customParameters[MERCHANT_name]=".$this->merchantName 
 			. "&customParameters[MERCHANT_email]=".$this->merchantEmail 
 			. "&customParameters[MERCHANT_shopurl]=".$this->shopURL 
