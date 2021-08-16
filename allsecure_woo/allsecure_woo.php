@@ -4,8 +4,8 @@
 * Plugin URI: https://www.allsecpay.com
 * Author: AllSecure 
 * Description: WooCommerce Plugin for accepting payments through AllSecure OPEN Platform.
-* Version:     1.6.0
-* Tested up to: 5.3.6
+* Version:     1.6.1
+* Tested up to: 5.3.8
 * WC requires at least: 3.0
 * WC tested up to: 4.9.1
 * @package AllSecure Open Woo
@@ -13,7 +13,7 @@
 
 include_once( dirname( __FILE__ ) . '/includes/allsecure_additional.php' );
 add_action('plugins_loaded', 'init_woocommerce_allsecure', 0);
-define( 'ALLSECURE_VERSION', '1.6.0' );
+define( 'ALLSECURE_VERSION', '1.6.1' );
 /**
  * Init payment gateway
  */
@@ -415,7 +415,7 @@ function init_woocommerce_allsecure() {
 					echo '</div>';
 				}
 				else {
-					wc_add_notice( __( 'Configuration error', 'allsecure_woo' ), 'error' );
+					wc_add_notice( __( 'Configuration error', 'allsecure_woo' ) .': '.$status->result->code, 'error' );
 					wp_safe_redirect( wc_get_page_permalink( 'cart' ) );
 					// return false;
 				}
@@ -790,15 +790,19 @@ function init_woocommerce_allsecure() {
 		} else 
 			$bankUrl = '#';
 		$bank = '<a href="'.$bankUrl.'" target="_new" ><img src="' . plugin_dir_url( __FILE__ ) . 'assets/images/'.$selectedBanner.'/'.$selectedBank.'.svg"></a>';
-		$vbv = '<a href="https://rs.visa.com/pay-with-visa/security-and-assistance/protected-everywhere.html" target="_new" ><img src="' . plugin_dir_url( __FILE__ ) . 'assets/images/'.$selectedBanner.'/3dvbv.svg"></a>';
-		$mcsc = '<a href="https://www.mastercard.rs/sr-rs/consumers/identity-check.html" target="_new" ><img src="' . plugin_dir_url( __FILE__ ) . 'assets/images/'.$selectedBanner.'/3dmcsc.svg"></a>';
+		$vbv = '<img src="' . plugin_dir_url( __FILE__ ) . 'assets/images/'.$selectedBanner.'/visa_secure.svg">';
+		$mcsc = '<img src="' . plugin_dir_url( __FILE__ ) . 'assets/images/'.$selectedBanner.'/mc_idcheck.svg">';
 		$allsecure_cards = $visa.''.$master.''.$maestro.''.$diners.''.$amex.''.$jcb ;
 		if ($selectedBanner !== 'none') {
-			$allsecure_banner = '<div id="allsecure_banner"><div class="allsecure">'.$allsecure.'</div><div class="allsecure_threeds">'.$vbv.' '.$mcsc.'</div><div class="allsecure_cards">'.$allsecure_cards.'</div><div class="allsecure_bank">'.$bank.'</div></div>';
-		echo  $allsecure_banner;
+			$allsecure_banner = '
+				<div id="allsecure_banner">
+					<div id="allsecure">'.$allsecure.'</div>
+					<div id="allsecure_threeds">'.$vbv.' '.$mcsc.'</div>
+					<div id="allsecure_bank">'.$bank.'</div>
+					<div id="allsecure_cards">'.$allsecure_cards.'</div>
+				</div>';
+			echo  $allsecure_banner;
 		}
 	}
 	add_filter('wp_footer', 'allsecurefooter'); 
-	
-	
 }
