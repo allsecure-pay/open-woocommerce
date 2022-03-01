@@ -2,12 +2,15 @@
 
 Accept payments in your WooCommerce store using AllSecure **OPEN** Platform.
 
-Current version: 1.6.1
+Current version: 1.7.0
 Compatible with WooCommerce <= 4.9.1
 
 See a fully functional WooCommerce <a href="http://demo.allsecure.xyz/cart/open/woo" target="_new">demo store</a> with AllSecure **OPEN** as a payment gateway.
 
 ## Version History
+Version 1.7.0
+- Change to the enhanced endpoint 
+
 Version 1.6.1
 - adding code when config error
 - fix banner display
@@ -20,7 +23,6 @@ Version 1.5.3
 
 Version 1.5.2
 - Linking banner logos
-
 
 Version 1.5.1
 - Translations update
