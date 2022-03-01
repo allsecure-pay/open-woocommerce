@@ -4,7 +4,7 @@
 * Plugin URI: https://www.allsecpay.com
 * Author: AllSecure 
 * Description: WooCommerce Plugin for accepting payments through AllSecure OPEN Platform.
-* Version:     1.6.1
+* Version:     1.7.0
 * Tested up to: 5.3.8
 * WC requires at least: 3.0
 * WC tested up to: 4.9.1
@@ -13,7 +13,7 @@
 
 include_once( dirname( __FILE__ ) . '/includes/allsecure_additional.php' );
 add_action('plugins_loaded', 'init_woocommerce_allsecure', 0);
-define( 'ALLSECURE_VERSION', '1.6.1' );
+define( 'ALLSECURE_VERSION', '1.7.0' );
 /**
  * Init payment gateway
  */
@@ -31,7 +31,6 @@ function init_woocommerce_allsecure() {
 			$this->id				= 'allsecure';
 			$this->method_title 	= __( 'AllSecure Credit Cards', 'allsecure_woo' );
 			$this->method_description = __( 'AllSecure Credit Cards payments', 'allsecure_woo' );
-			// $icon 				= plugins_url( '/assets/images/general/allsecure.svg', __FILE__ );
 			$icon_html			= $icon_html = $this->get_icon();
 			$this->icon			= $icon_html;
 			$this->screen 		= plugins_url( 'screen.png', __FILE__ );
@@ -44,14 +43,13 @@ function init_woocommerce_allsecure() {
 			$this->description		= $this->settings['description'];
 			$this->operation		= $this->settings['operation_mode'];
 			$this->supports			= array( 'refunds' );
-			// $this->style			= $this->settings['widget_style'];
 			if($this->operation		== 'live'){
-				$this->allsecure_url	= "https://oppwa.com";
+				$this->allsecure_url	= "https://eu-prod.oppwa.com";
 				$this->ACCESS_TOKEN		= $this->settings['access_token'];
 				$this->ENTITY_ID		= $this->settings['entity_id'];
 			}
 			else {
-				$this->allsecure_url	= "https://test.oppwa.com";
+				$this->allsecure_url	= "https://eu-test.oppwa.com";
 				$this->ACCESS_TOKEN		= $this->settings['test_access_token'];
 				$this->ENTITY_ID		= $this->settings['test_entity_id'];
 				$this->forceResultCode	= $this->settings['force_code'];
@@ -69,7 +67,6 @@ function init_woocommerce_allsecure() {
 			$this->cards_supported	= $this->get_option('card_supported');
 			$this->merchantBank	= $this->settings['merchant_bank'];
 			$this->woocommerce_version 	= $woocommerce->version;
-			// $this->return_url   	= str_replace( 'https:', 'http:', add_query_arg( 'wc-api', 'allsecure_payment', home_url( '/' ) ) );
 			$this->return_url   	= add_query_arg( 'wc-api', 'allsecure_payment', home_url( '/' ) ) ;
 
 			/* Actions */
@@ -440,7 +437,7 @@ function init_woocommerce_allsecure() {
 				); 
 				if( !is_wp_error( $gtwresponse ) ) {
 					$merchant_info = $this->allsecure_get_general_merchant_info();
-					$tracking_url = 'https://api.allsecpay.xyz/tracker';
+					$tracking_url = 'https://api.allsecure.xyz/tracker';
 					// $tracking_url = 'https://envl68ok25uvg.x.pipedream.net/';
 					if ( $this->version_tracker == "yes") {
 						wp_remote_post( $tracking_url, array( 'body' => $merchant_info,'timeout' => 100,));
