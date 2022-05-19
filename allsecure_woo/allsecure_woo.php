@@ -1,10 +1,10 @@
 <?php
 /**
 * Plugin Name: AllSecure Open Woo
-* Plugin URI: https://www.allsecpay.com
+* Plugin URI: https://help.allsecure.xyz
 * Author: AllSecure 
 * Description: WooCommerce Plugin for accepting payments through AllSecure OPEN Platform.
-* Version:     1.7.0
+* Version:     1.7.1
 * Tested up to: 5.3.8
 * WC requires at least: 3.0
 * WC tested up to: 4.9.1
@@ -13,7 +13,7 @@
 
 include_once( dirname( __FILE__ ) . '/includes/allsecure_additional.php' );
 add_action('plugins_loaded', 'init_woocommerce_allsecure', 0);
-define( 'ALLSECURE_VERSION', '1.7.0' );
+define( 'ALLSECURE_VERSION', '1.7.1' );
 /**
  * Init payment gateway
  */
@@ -335,6 +335,7 @@ function init_woocommerce_allsecure() {
 			);
 			if( !is_wp_error( $gtwresponse ) ) {
 				$status = json_decode($gtwresponse['body']);
+				echo '<script>console.log('. json_encode($status) .');</script>';
 				if(isset($status->id)){
 					$lang = strtolower(substr(get_bloginfo('language'), 0, 2 ));
 					echo '<script src="'.$this->allsecure_url.'/v1/paymentWidgets.js?checkoutId='.$status->id.'"></script>';
@@ -414,7 +415,6 @@ function init_woocommerce_allsecure() {
 				else {
 					wc_add_notice( __( 'Configuration error', 'allsecure_woo' ) .': '.$status->result->code, 'error' );
 					wp_safe_redirect( wc_get_page_permalink( 'cart' ) );
-					// return false;
 				}
 			}
 		}
@@ -438,7 +438,6 @@ function init_woocommerce_allsecure() {
 				if( !is_wp_error( $gtwresponse ) ) {
 					$merchant_info = $this->allsecure_get_general_merchant_info();
 					$tracking_url = 'https://api.allsecure.xyz/tracker';
-					// $tracking_url = 'https://envl68ok25uvg.x.pipedream.net/';
 					if ( $this->version_tracker == "yes") {
 						wp_remote_post( $tracking_url, array( 'body' => $merchant_info,'timeout' => 100,));
 					}
@@ -481,8 +480,6 @@ function init_woocommerce_allsecure() {
 						$resp_code = $status->result->code ;
 						$resp_code_translated = array_key_exists($resp_code, $errorMessages) ? $errorMessages[$resp_code] :  $status->result->description ;
 						$order->add_order_note(sprintf(__('AllSecure Transaction Failed. The Transaction Status %s', 'allsecure_woo'), $status->result->description ));
-						// $declinemessage = sprintf(__('Transaction Unsuccessful. The status message <b>%s</b>', 'allsecure_woo'), $resp_code_translated ) ;
-						// wc_add_notice( $declinemessage, 'error' );
 						$astrxId = $status->id;
 						$query = parse_url( wc_get_checkout_url( $order ), PHP_URL_QUERY);
 						if ($query) {
