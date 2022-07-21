@@ -2,26 +2,30 @@ msgid ""
 msgstr ""
 "Project-Id-Version: allsecure_woo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-08 18:39+0100\n"
-"PO-Revision-Date: 2019-11-08 18:42+0100\n"
+"POT-Creation-Date: 2022-06-14 09:37+0200\n"
+"PO-Revision-Date: 2022-06-14 09:42+0200\n"
 "Last-Translator: \n"
 "Language-Team: AllSecure <support@allsecpay.com>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;_;gettext;gettext_noop;__;_e;"
 "__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;"
 "_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 3.1\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: allsecure_woo.php:32
 msgid "AllSecure Credit Cards"
-msgstr "AllSecure Open"
+msgstr "Platne Kartice"
+
+#: allsecure_woo.php:33
+msgid "AllSecure Credit Cards payments"
+msgstr "Plaćanje Karticama"
 
 #: allsecure_woo.php:42
 msgid "Credit Cards"
@@ -83,7 +87,7 @@ msgstr "API TEST Parametri"
 msgid ""
 "Enter your AllSecure Test API Credentials to process transactions via "
 "AllSecure. You can get your AllSecure Test Credentials via <a href=\"mailto:"
-"support@allsecpay.com\">AllSecure Support</a>"
+"support@allsecure.eu\">AllSecure Support</a>"
 msgstr ""
 "Unesite svoje Test API paremetre kako bi procesirali transakcije kroz "
 "AllSecure. Parametre možete dobiti putem <a href=\"mailto:podrska@allsecure."
@@ -129,7 +133,7 @@ msgstr "API LIVE Parametri"
 msgid ""
 "Enter your AllSecure Live API Credentials to process transactions via "
 "AllSecure. You can get your AllSecure Live Credentials via <a href=\"mailto:"
-"support@allsecpay.com\">AllSecure Support</a>"
+"support@allsecure.eu\">AllSecure Support</a>"
 msgstr ""
 "Unesite svoje LIVE API parametre kako bi procesirali transakcije kroz "
 "AllSecure. Parametre možete dobiti putem <a href=\"mailto:podrska@allsecure."
@@ -234,7 +238,7 @@ msgstr "Svetla pozadina"
 msgid "Dark Background"
 msgstr "Tamna pozadina"
 
-#: allsecure_woo.php:229 allsecure_woo.php:720
+#: allsecure_woo.php:229 allsecure_woo.php:725
 msgid "Payment Type"
 msgstr "Vrsta plaćanja"
 
@@ -256,8 +260,8 @@ msgstr "Omogućene kartice"
 
 #: allsecure_woo.php:247
 msgid ""
-"Contact support at <a href=\"support@allsecpay.com\">support@allsecpay.com</"
-"a> if you want to accept AMEX transactions"
+"Contact support at <a href=\"support@allsecure.eu\">support@allsecure.eu</a> "
+"if you want to accept AMEX transactions"
 msgstr ""
 "Kontaktirajte podršku na <a href=\"podrska@allsecure.rs\">podrska@allsecure."
 "rs</a> ukoliko želite da prihvatate AMEX transakcije"
@@ -306,27 +310,27 @@ msgstr ""
 msgid "Payvision"
 msgstr ""
 
-#: allsecure_woo.php:347 allsecure_woo.php:395
+#: allsecure_woo.php:357 allsecure_woo.php:403
 msgid "Cardholder not valid"
 msgstr "Uneti podaci o korisniku kartice nisu ispravni"
 
-#: allsecure_woo.php:384
+#: allsecure_woo.php:392
 msgid "Cancel"
 msgstr "Otkaži"
 
-#: allsecure_woo.php:399
+#: allsecure_woo.php:407
 msgid "Merchant"
 msgstr "Prodavac"
 
-#: allsecure_woo.php:400
+#: allsecure_woo.php:408
 msgid "This is the TEST MODE. No money will be charged"
 msgstr "TESTNI REŽIM. Novac neće biti naplaćen"
 
-#: allsecure_woo.php:406
+#: allsecure_woo.php:414
 msgid "Configuration error"
 msgstr "Greška u konfiguraciji"
 
-#: allsecure_woo.php:441
+#: allsecure_woo.php:447
 #, php-format
 msgid ""
 "AllSecure Transaction Successful. The Transaction ID was %s and Payment "
@@ -335,54 +339,54 @@ msgstr ""
 "Uspešna transakcija. ID transakcije: %s , Status: %s. Tip plaćanja: %s. "
 "Autorizacioni kod: %s"
 
-#: allsecure_woo.php:442
+#: allsecure_woo.php:448
 #, php-format
 msgid "Transaction Successful. The status message <b>%s</b>"
 msgstr "Transakcija je uspešna. Odgovor glasi: <b>%s</b>"
 
-#: allsecure_woo.php:474
+#: allsecure_woo.php:480
 #, php-format
 msgid "AllSecure Transaction Failed. The Transaction Status %s"
 msgstr "AllSecure Transaction Failed. The Transaction Status %s"
 
-#: allsecure_woo.php:516
+#: allsecure_woo.php:520
 #, php-format
 msgid ""
 "AllSecure Capture Processed Successful. The Capture ID was %s and Request "
 "Status => %s"
 msgstr "Kompletiranje (CP) Uspešno. ID transakcije: %s Status: %s"
 
-#: allsecure_woo.php:521
+#: allsecure_woo.php:525
 #, php-format
 msgid ""
 "AllSecure Capture Request Failed. The Capture Status => %s. Code is == %s"
 msgstr "Kompletiranje (CP) neuspešno. Status: %s Kod: %s "
 
-#: allsecure_woo.php:558
+#: allsecure_woo.php:562
 #, php-format
 msgid ""
 "AllSecure Reversal Processed Successful. The Reversal ID was: %s and Request "
 "Status: %s"
 msgstr "Otkazivanje (RV) uspešno. ID transakcije: %s Status: %s"
 
-#: allsecure_woo.php:563
+#: allsecure_woo.php:567
 #, php-format
 msgid "AllSecure Reversal Request Failed. The Reversal Status: %s. Code is: %s"
 msgstr "Otkazivanje (RV) neuspešno. Status: %s Kod: %s "
 
-#: allsecure_woo.php:604
+#: allsecure_woo.php:608
 #, php-format
 msgid ""
 "AllSecure Refund Processed Successful. The Refund ID: %s and Request Status: "
 "%s"
 msgstr "Refundacija (RF) uspešno. ID transakcije: %s Status: %s"
 
-#: allsecure_woo.php:609
+#: allsecure_woo.php:613
 #, php-format
 msgid "AllSecure Refund Request Failed. The Refund Status: %s"
 msgstr "Refundacija (RF) neuspešna. Status: %s "
 
-#: allsecure_woo.php:639
+#: allsecure_woo.php:643
 #, php-format
 msgid ""
 "<strong>%s</strong> is enabled and WooCommerce is not forcing the SSL "
@@ -394,24 +398,24 @@ msgstr ""
 "sertifikata i da ste ga <a href=\"%s\">primenili kako bi vaša checkout "
 "strana bila sigurna.</a>"
 
-#: allsecure_woo.php:679
+#: allsecure_woo.php:683
 #, php-format
 msgid "Transaction Unsuccessful. The status message <b>%s</b>"
 msgstr "Neuspešna transakcije. Odgovor glasi: <b>%s</b>"
 
-#: allsecure_woo.php:690
+#: allsecure_woo.php:694
 msgid "Transaction details"
 msgstr "Detalji transakcije"
 
-#: allsecure_woo.php:692
+#: allsecure_woo.php:696
 msgid "Transaction Codes"
 msgstr "Autorizacioni kodovi"
 
-#: allsecure_woo.php:717
+#: allsecure_woo.php:722
 msgid "Card Type"
 msgstr "Tip kartice"
 
-#: allsecure_woo.php:723
+#: allsecure_woo.php:734
 msgid "Transaction Time"
 msgstr "Vreme transakcije"
 

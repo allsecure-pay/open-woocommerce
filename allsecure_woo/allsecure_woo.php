@@ -4,8 +4,8 @@
 * Plugin URI: https://help.allsecure.xyz
 * Author: AllSecure 
 * Description: WooCommerce Plugin for accepting payments through AllSecure OPEN Platform.
-* Version:     1.7.1
-* Tested up to: 5.3.8
+* Version:     1.7.2
+* Tested up to: 5.3.12
 * WC requires at least: 3.0
 * WC tested up to: 4.9.1
 * @package AllSecure Open Woo
@@ -13,7 +13,7 @@
 
 include_once( dirname( __FILE__ ) . '/includes/allsecure_additional.php' );
 add_action('plugins_loaded', 'init_woocommerce_allsecure', 0);
-define( 'ALLSECURE_VERSION', '1.7.1' );
+define( 'ALLSECURE_VERSION', '1.7.2' );
 /**
  * Init payment gateway
  */
@@ -83,7 +83,7 @@ function init_woocommerce_allsecure() {
 			/* add_action to parse values when error */
 			add_action( 'woocommerce_before_checkout_form', array( $this,'parse_value_allsecure_error'), 10 );
 			/* Lets check for SSL */
-			add_action( 'admin_notices', array( $this, 'do_ssl_check' ) );
+			/* add_action( 'admin_notices', array( $this, 'do_ssl_check' ) ); */
 			wp_enqueue_style( 'allsecure_style', plugin_dir_url( __FILE__ ) . 'assets/css/allsecure-style.css', array(), null );
 		}
 		/* Woocommerce Admin Panel Option Manage AllSecure Settings here. */
@@ -126,7 +126,7 @@ function init_woocommerce_allsecure() {
 				'test_credentials' => array(
 					'title'       => __('API Test Credentials', 'allsecure_woo' ),
 					'type'        => 'title',
-					'description' => __('Enter your AllSecure Test API Credentials to process transactions via AllSecure. You can get your AllSecure Test Credentials via <a href="mailto:support@allsecpay.com">AllSecure Support</a>', 'allsecure_woo' ),
+					'description' => __('Enter your AllSecure Test API Credentials to process transactions via AllSecure. You can get your AllSecure Test Credentials via <a href="mailto:support@allsecure.eu">AllSecure Support</a>', 'allsecure_woo' ),
 				),
 				'test_entity_id' => array(
 					'title' => __('Test Entity ID', 'allsecure_woo' ),
@@ -152,7 +152,7 @@ function init_woocommerce_allsecure() {
 				'live_credentials' => array(
 					'title'       => __('API LIVE Credentials', 'allsecure_woo' ),
 					'type'        => 'title',
-					'description' => __('Enter your AllSecure Live API Credentials to process transactions via AllSecure. You can get your AllSecure Live Credentials via <a href="mailto:support@allsecpay.com">AllSecure Support</a>', 'allsecure_woo' ), 
+					'description' => __('Enter your AllSecure Live API Credentials to process transactions via AllSecure. You can get your AllSecure Live Credentials via <a href="mailto:support@allsecure.eu">AllSecure Support</a>', 'allsecure_woo' ), 
 				),
 				'entity_id' => array(
 					'title' => __('Entity ID', 'allsecure_woo' ),
@@ -244,7 +244,7 @@ function init_woocommerce_allsecure() {
 						'MASTER',
 						'MAESTRO'
 					),
-					'description' => __( 'Contact support at <a href="support@allsecpay.com">support@allsecpay.com</a> if you want to accept AMEX transactions', 'allsecure_woo' ),
+					'description' => __( 'Contact support at <a href="support@allsecure.eu">support@allsecure.eu</a> if you want to accept AMEX transactions', 'allsecure_woo' ),
 					'css'   => 'height: 100%;',
 					'type' => 'multiselect',
 					'options' => array(
@@ -373,9 +373,7 @@ function init_woocommerce_allsecure() {
 						if($lang == 'sr'){
 							echo '$(".wpwl-button-pay").html("Plati");'. PHP_EOL;
 						}
-						echo 'var BannerHtml = "<div id=\"banner\"><div id=\"d1\"><img border=\"0\" src=\"' . plugins_url() .'/allsecure_woo/assets/images/general/3dmcsc.svg\" alt=\"MasterCard SecureCode\"></div><div id=\"d2\"><img border=\"0\" src=\"' . plugins_url() .'/allsecure_woo/assets/images/general/3dvbv.svg\" alt=\"VerifiedByVISA\"></div><div id=\"d3\"><img border=\"0\" src=\"' .plugins_url(). '/allsecure_woo/assets/images/general/3dasb.svg\" alt=\"Secure Payment\"></div></div>";
-						$("form.wpwl-form-card").find(".wpwl-group-submit").after(BannerHtml);
-						$(".wpwl-group-cardNumber").after( $(".wpwl-group-cardHolder").detach());
+						echo '$(".wpwl-group-cardNumber").after( $(".wpwl-group-cardHolder").detach());
 						var visa = $(".wpwl-brand:first").clone().removeAttr("class").attr("class", "wpwl-brand-card wpwl-brand-custom wpwl-brand-VISA");
 						var master = $(visa).clone().removeClass("wpwl-brand-VISA").addClass("wpwl-brand-MASTER");
 						var maestro = $(visa).clone().removeClass("wpwl-brand-VISA").addClass("wpwl-brand-MAESTRO");
@@ -638,14 +636,15 @@ function init_woocommerce_allsecure() {
 			}
 			echo 'Error in communication';
 		}
-		// Custom function not required by the Gateway
+		/* Custom function not required by the Gateway
 		public function do_ssl_check() {
 			if( $this->enabled == "yes" ) {
 				if( get_option( 'woocommerce_force_ssl_checkout' ) == "no" ) {
 					echo "<div class=\"error\"><p>". sprintf( __('<strong>%s</strong> is enabled and WooCommerce is not forcing the SSL certificate on your checkout page. Please ensure that you have a valid SSL certificate and that you are <a href=\"%s\">forcing the checkout pages to be secured.</a>', 'allsecure_woo') , $this->method_title, admin_url( 'admin.php?page=wc-settings&tab=checkout' ) ) ."</p></div>";
 				}
 			}
-		}
+		} */
+		
 		/**
 		 * Get general merchants info for version tracker
 		 ** @return array
